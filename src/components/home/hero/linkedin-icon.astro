@@ -1,0 +1,19 @@
+---
+import { socialMediaLinks } from "../../content/social-media-links";
+import SocialMediaLink from "./social-media-link.astro";
+
+const { linkedinLink } = socialMediaLinks;
+---
+
+<SocialMediaLink href={linkedinLink} ariaLabel="LinkedIn">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    class="h-8 w-8"
+  >
+    <path
+      d="M4.98 3.5a2.48 2.48 0 1 0 0 4.96 2.48 2.48 0 0 0 0-4.96ZM3 9h4v12H3V9Zm7 0h3.8v1.64h.05c.53-1 1.82-2.06 3.75-2.06 4.01 0 4.75 2.64 4.75 6.08V21h-4v-5.36c0-1.28-.02-2.93-1.78-2.93-1.78 0-2.06 1.39-2.06 2.83V21h-4V9Z"
+    ></path>
+  </svg>
+</SocialMediaLink>

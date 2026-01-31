@@ -1,0 +1,27 @@
+---
+import type { HTMLAttributes } from "astro/types";
+import { twMerge } from "tailwind-merge";
+
+type Props = {
+  href: string;
+  attributes?: HTMLAttributes<"a">;
+  border?: boolean;
+};
+
+const { href, attributes, border = false } = Astro.props;
+---
+
+<li>
+  <a
+    href={href}
+    class={twMerge(
+      "text-primary transition-colors duration-300 hover:text-secondary",
+      border
+        ? "bg-primary rounded-md px-6 py-3 hover:bg-secondary/80 text-white hover:text-white"
+        : "",
+    )}
+    {...attributes}
+  >
+    <slot />
+  </a>
+</li>
