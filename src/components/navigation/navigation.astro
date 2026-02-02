@@ -1,17 +1,11 @@
 ---
-import NavigationLink from "./navigation-link.astro";
+import DesktopNavigation from "./desktop-navigation.astro";
+import MobileNavigation from "./mobile-navigation.astro";
 ---
 
 <header>
-  <nav class="container mx-auto p-8">
-    <ul class="flex items-center justify-center gap-20">
-      <NavigationLink href="/">
-        <img src="/favicon.svg" alt="MNPS Alumni Foundation" />
-      </NavigationLink>
-      <NavigationLink href="/">ALUMNI CONNECTION</NavigationLink>
-      <NavigationLink href="/">ALUMNI STORIES</NavigationLink>
-      <NavigationLink href="/">FUTURES FUNDED</NavigationLink>
-      <NavigationLink href="/" border>GET INVOLVED</NavigationLink>
-    </ul>
+  <nav class="container mx-auto max-w-7xl p-8">
+    <MobileNavigation />
+    <DesktopNavigation />
   </nav>
 </header>
