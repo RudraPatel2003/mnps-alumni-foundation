@@ -1,8 +1,9 @@
 import type { KnipConfig } from "knip";
 
 const config: KnipConfig = {
-  // needed for eslint to work properly
-  ignoreDependencies: ["@typescript-eslint/parser"],
+  // @typescript-eslint/parser: needed for knip to work properly
+  // sharp: needed for astro:assets to work properly with pnpm
+  ignoreDependencies: ["@typescript-eslint/parser", "sharp"],
 };
 
 export default config;
