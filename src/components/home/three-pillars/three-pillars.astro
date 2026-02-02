@@ -1,0 +1,47 @@
+---
+import { threePillarsContent } from "../../content/three-pillars-content";
+import Pillar, { type PillarInformation } from "./pillar.astro";
+
+const { alumniConnectionContent, alumniStoriesContent, futuresFundedContent } =
+  threePillarsContent;
+
+const pillars: PillarInformation[] = [
+  {
+    title: "Alumni Connection",
+    description: alumniConnectionContent,
+    href: "/",
+  },
+  {
+    title: "Alumni Stories",
+    description: alumniStoriesContent,
+    href: "/",
+  },
+  {
+    title: "Futures Funded",
+    description: futuresFundedContent,
+    href: "/",
+  },
+];
+---
+
+<section class="w-full py-16">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="text-center">
+      <h2 class="text-3xl font-bold text-primary md:text-4xl">
+        Our Three Pillars
+      </h2>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
+      {
+        pillars.map((pillar) => (
+          <Pillar
+            title={pillar.title}
+            description={pillar.description}
+            href={pillar.href}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>
