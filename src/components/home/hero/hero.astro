@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+
+import FacebookIcon from "./facebook-icon.astro";
+import heroImage from "./hero-image.jpg";
+import InstagramIcon from "./instagram-icon.astro";
+import LinkedInIcon from "./linkedin-icon.astro";
+---
+
+<section class="w-full py-16">
+  <div class="mx-auto max-w-7xl px-6">
+    <div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+      <div class="order-1 md:order-2">
+        <Image
+          src={heroImage}
+          alt="MNPS Alumni Foundation"
+          class="h-auto w-full rounded-xl object-cover"
+        />
+      </div>
+
+      <div class="order-2 md:order-1">
+        <h1 class="text-4xl font-bold text-primary md:text-5xl">
+          MNPS Alumni Foundation
+        </h1>
+
+        <p class="mt-6 max-w-prose text-lg leading-relaxed text-primary/80">
+          The MNPS Alumni Foundation is the central hub connecting alumni,
+          amplifying their stories, and mobilizing giving to support annual MNPS
+          initiatives and student scholarships.
+        </p>
+
+        <div class="mt-8 flex items-center gap-6">
+          <FacebookIcon />
+          <InstagramIcon />
+          <LinkedInIcon />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

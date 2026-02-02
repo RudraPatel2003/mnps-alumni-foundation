@@ -1,10 +1,11 @@
-@import "./fonts.css";
-
 @import "tailwindcss";
 
+@import "./fonts.css";
+ 
+
 @theme {
-  --color-primary: "#0079a2";
-  --color-secondary: "#f1b435";
+  --color-primary: #0079a2;
+  --color-secondary: #f1b435;
 
   --font-sans: "museo-sans", sans-serif;
   --font-serif: "museo-slab", serif;

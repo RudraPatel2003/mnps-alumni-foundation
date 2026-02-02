@@ -1,0 +1,18 @@
+---
+type Props = {
+  href: string;
+  ariaLabel: string;
+};
+
+const { href, ariaLabel } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={ariaLabel}
+  class="text-secondary transition-colors duration-300 hover:text-primary"
+>
+  <slot />
+</a>
