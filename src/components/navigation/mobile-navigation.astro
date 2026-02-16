@@ -1,4 +1,5 @@
 ---
+import { getInvolvedLink } from "../content/get-involved-link";
 import HamburgerIcon from "./hamburger-icon.astro";
 import NavigationLink from "./navigation-link.astro";
 import NavigationLogo from "./navigation-logo.astro";
@@ -23,7 +24,11 @@ import NavigationLogo from "./navigation-logo.astro";
           ALUMNI STORYTELLING
         </NavigationLink>
         <NavigationLink href="/futures-funded">FUTURES FUNDED</NavigationLink>
-        <NavigationLink href="/" border>GET INVOLVED</NavigationLink>
+        <NavigationLink
+          href={getInvolvedLink}
+          attributes={{ target: "_blank", rel: "noopener noreferrer" }}
+          border>GET INVOLVED</NavigationLink
+        >
       </ul>
     </div>
   </details>
