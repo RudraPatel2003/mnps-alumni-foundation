@@ -35,3 +35,7 @@ Preview the production site:
 ```sh
 pnpm preview
 ```
+
+## Banner Image
+
+The banner image was taken from Instagram and can be found [at this link](https://www.instagram.com/p/DJFarxkPg1I/).
