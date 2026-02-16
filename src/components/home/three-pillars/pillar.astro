@@ -1,19 +1,21 @@
 ---
 type Props = {
   title: string;
+  subtitle: string;
   description: string;
   href: string;
 };
 
 export type PillarInformation = Props;
 
-const { title, description, href } = Astro.props;
+const { title, subtitle, description, href } = Astro.props;
 ---
 
 <article
   class="flex h-full flex-col rounded-xl bg-primary p-6 text-white shadow-lg"
 >
   <h3 class="text-2xl font-semibold">{title}</h3>
+  <p class="mt-2 text-base font-semibold text-white">{subtitle}</p>
   <p class="mt-4 text-base leading-relaxed text-white/90">{description}</p>
   <div class="mt-auto pt-6">
     <a

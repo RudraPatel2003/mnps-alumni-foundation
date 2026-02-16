@@ -8,16 +8,19 @@ const { alumniConnectionContent, alumniStoriesContent, futuresFundedContent } =
 const pillars: PillarInformation[] = [
   {
     title: "Alumni Connection",
+    subtitle: "Stay Connected. Stay MNPS.",
     description: alumniConnectionContent,
     href: "/",
   },
   {
-    title: "Alumni Stories",
+    title: "Alumni Storytelling",
+    subtitle: "Celebrating Alumni Voices.",
     description: alumniStoriesContent,
     href: "/",
   },
   {
     title: "Futures Funded",
+    subtitle: "Turning Alumni Pride into Student Opportunity",
     description: futuresFundedContent,
     href: "/",
   },
@@ -37,6 +40,7 @@ const pillars: PillarInformation[] = [
         pillars.map((pillar) => (
           <Pillar
             title={pillar.title}
+            subtitle={pillar.subtitle}
             description={pillar.description}
             href={pillar.href}
           />
