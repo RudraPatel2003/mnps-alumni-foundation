@@ -10,7 +10,7 @@ import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import tseslint from "typescript-eslint";
 
 export default defineConfig(
-  [globalIgnores([".astro"])],
+  [globalIgnores([".astro", "dist"])],
   eslint.configs.recommended,
   tseslint.configs.recommended,
   tseslint.configs.stylistic,
