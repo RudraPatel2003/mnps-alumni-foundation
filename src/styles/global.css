@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @import "./fonts.css";
- 
 
 @theme {
   --color-primary: #0079a2;
@@ -9,8 +8,11 @@
 
   --font-sans: "museo-sans", sans-serif;
   --font-serif: "museo-slab", serif;
+
+  --breakpoint-nav: 1135px;
 }
 
-html, body {
+html,
+body {
   font-family: var(--font-sans);
 }

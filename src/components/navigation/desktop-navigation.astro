@@ -4,12 +4,10 @@ import NavigationLink from "./navigation-link.astro";
 import NavigationLogo from "./navigation-logo.astro";
 ---
 
-<ul class="hidden items-center justify-center gap-8 lg:flex">
+<ul class="hidden items-center justify-center gap-8 nav:flex">
   <NavigationLogo />
   <NavigationLink href="/alumni-connection">ALUMNI CONNECTION</NavigationLink>
-  <NavigationLink href="/alumni-storytelling"
-    >ALUMNI STORYTELLING</NavigationLink
-  >
+  <NavigationLink href="/alumni-storytelling">STORYTELLING</NavigationLink>
   <NavigationLink href="/futures-funded">FUTURES FUNDED</NavigationLink>
   <NavigationLink
     href={getInvolvedLink}
