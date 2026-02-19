@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-    <a href="https://mnpsalumni.org"><img src="./src/images/repository-banner.png"></a>
+    <a href="https://mnpsalumni.org"><img src="./public/images/repository-banner.png"></a>
   <br>
   <a href="https://mnpsalumni.org">MNPS Alumni Foundation</a>
   <br>
