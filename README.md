@@ -8,7 +8,16 @@
 
 ## Description
 
-A website for the MNPS Alumni Foundation to connect alumni, foster connections, and raise donations
+A website for the MNPS Alumni Foundation to connect alumni, foster connections,
+and raise donations.
+
+## Recommended VSCode Extensions
+
+- ESLint
+- Prettier
+- Astro
+- markdownlint
+- Tailwind CSS IntelliSense
 
 ## Local Development
 
@@ -22,6 +31,12 @@ Start the development server:
 
 ```sh
 pnpm dev
+```
+
+Run the linter
+
+```sh
+pnpm lint
 ```
 
 Build the production site:

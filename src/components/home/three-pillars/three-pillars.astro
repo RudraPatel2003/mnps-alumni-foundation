@@ -2,27 +2,30 @@
 import Pillar, { type PillarInformation } from "./pillar.astro";
 import { threePillarsContent } from "./three-pillars-content";
 
-const { alumniConnectionContent, alumniStoriesContent, futuresFundedContent } =
-  threePillarsContent;
+const {
+  connectingAlumniContent,
+  sharingStoriesContent,
+  fundingFuturesContent,
+} = threePillarsContent;
 
 const pillars: PillarInformation[] = [
   {
-    title: "Alumni Connection",
+    title: "Connecting Alumni",
     subtitle: "Stay Connected. Stay MNPS.",
-    description: alumniConnectionContent,
-    href: "/alumni-connection",
+    description: connectingAlumniContent,
+    href: "/connecting-alumni",
   },
   {
-    title: "Alumni Storytelling",
+    title: "Sharing Stories",
     subtitle: "Celebrating Alumni Voices.",
-    description: alumniStoriesContent,
-    href: "/alumni-storytelling",
+    description: sharingStoriesContent,
+    href: "/sharing-stories",
   },
   {
-    title: "Futures Funded",
+    title: "Funding Futures",
     subtitle: "Turning Alumni Pride into Student Opportunity.",
-    description: futuresFundedContent,
-    href: "/futures-funded",
+    description: fundingFuturesContent,
+    href: "/funding-futures",
   },
 ];
 ---
