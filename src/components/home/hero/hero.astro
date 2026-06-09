@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 
+import { getInvolvedLink } from "../../shared-content/get-involved-link";
+import Button from "../../ui/button.astro";
 import FacebookIcon from "./facebook-icon.astro";
 import heroImage from "./hero-image.jpg";
 import InstagramIcon from "./instagram-icon.astro";
@@ -9,32 +11,72 @@ import LinkedInIcon from "./linkedin-icon.astro";
 
 <section class="w-full py-16">
   <div class="mx-auto max-w-7xl px-6">
-    <div class="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
-      <div class="order-1 md:order-2">
-        <Image
-          src={heroImage}
-          alt="MNPS Alumni Foundation"
-          class="h-auto w-full rounded-xl object-cover"
-        />
-      </div>
-
-      <div class="order-2 md:order-1">
-        <h1 class="text-4xl font-bold text-primary md:text-5xl">
-          MNPS Alumni Foundation
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+      <div>
+        <h1
+          class="font-serif text-4xl leading-[1.08] tracking-[-0.01em] text-primary sm:text-5xl lg:text-[3.5rem]"
+        >
+          <span class="hero-line">
+            Connecting <span class="hero-accent">alumni.</span>
+          </span>
+          <span class="hero-line">
+            Amplifying <span class="hero-accent">stories.</span>
+          </span>
+          <span class="hero-line">
+            Funding <span class="hero-accent">futures.</span>
+          </span>
         </h1>
 
         <p class="mt-6 max-w-prose text-lg leading-relaxed text-primary/80">
-          The MNPS Alumni Foundation is the central hub connecting alumni,
-          amplifying their stories, and mobilizing giving to support annual MNPS
-          initiatives and student scholarships.
+          The central hub connecting alumni, amplifying their stories, and
+          mobilizing giving to support annual MNPS initiatives and student
+          scholarships.
         </p>
 
-        <div class="mt-8 flex items-center gap-6">
-          <FacebookIcon />
-          <InstagramIcon />
-          <LinkedInIcon />
+        <div class="mt-8 flex flex-wrap items-center gap-x-7 gap-y-4">
+          <Button
+            href={getInvolvedLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold"
+          >
+            Join the Foundation
+          </Button>
+
+          <div class="flex items-center gap-4">
+            <span
+              class="text-[0.7rem] font-semibold tracking-[0.2em] text-primary/45 uppercase"
+              >Follow</span
+            >
+            <span class="h-5 w-px bg-primary/15"></span>
+            <FacebookIcon />
+            <InstagramIcon />
+            <LinkedInIcon />
+          </div>
         </div>
+      </div>
+
+      <div>
+        <Image
+          src={heroImage}
+          alt="MNPS graduates celebrating at Nashville's Parthenon"
+          class="h-auto w-full rounded-t-[5rem] rounded-b-4xl object-cover shadow-xl ring-1 shadow-primary/10 ring-black/5"
+        />
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .hero-line {
+    display: block;
+  }
+
+  .hero-accent {
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color: #f1b435;
+    text-decoration-thickness: 0.1em;
+    text-underline-offset: 0.12em;
+  }
+</style>

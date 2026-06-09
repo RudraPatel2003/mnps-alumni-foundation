@@ -1,4 +1,6 @@
 ---
+import Button from "../../ui/button.astro";
+
 type Props = {
   title: string;
   subtitle: string;
@@ -18,11 +20,6 @@ const { title, subtitle, description, href } = Astro.props;
   <p class="mt-2 text-base font-semibold text-white">{subtitle}</p>
   <p class="mt-4 text-base leading-relaxed text-white/90">{description}</p>
   <div class="mt-auto pt-6">
-    <a
-      href={href}
-      class="inline-flex items-center rounded-md bg-white px-6 py-3 text-primary transition-colors duration-300 hover:bg-secondary/80"
-    >
-      LEARN MORE
-    </a>
+    <Button href={href} variant="secondary"> LEARN MORE </Button>
   </div>
 </article>
