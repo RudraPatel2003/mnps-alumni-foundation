@@ -6,26 +6,37 @@ import Button from "../ui/button.astro";
 <section class="w-full py-16">
   <div class="mx-auto max-w-5xl px-6">
     <div class="text-center">
-      <p class="text-sm font-semibold tracking-[0.3em] text-secondary">
+      <p
+        class="text-sm font-semibold tracking-[0.3em] text-secondary uppercase"
+      >
         Coming Soon
       </p>
-      <h1 class="mt-3 text-3xl font-bold text-primary md:text-4xl">
-        Funding Futures
+      <h1 class="mt-4 font-serif text-4xl text-primary md:text-5xl">
+        Funding <span class="display-accent">Futures</span>
       </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary/80">
+        We're preparing to launch initiatives that will mobilize alumni giving
+        to support MNPS students and scholarships. This page will outline ways
+        you can invest in the future of our graduates.
+      </p>
     </div>
-    <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-primary/80">
-      We're preparing to launch initiatives that will mobilize alumni giving to
-      support MNPS students and scholarships. This page will outline ways you
-      can invest in the future of our graduates.
-    </p>
-    <p class="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-primary/80">
-      Until then, you can join our network and be among the first to learn how
-      to give and make an impact.
-    </p>
-    <div class="mt-8 text-center">
-      <Button href={getInvolvedLink} target="_blank" rel="noopener noreferrer">
-        Join the Alumni Network
-      </Button>
+
+    <div
+      class="mt-14 rounded-2xl bg-primary/15 p-8 text-center ring-1 ring-primary/10 sm:p-10"
+    >
+      <p class="mx-auto max-w-xl text-lg leading-relaxed text-primary/80">
+        Until then, you can join our network and be among the first to learn how
+        to give and make an impact.
+      </p>
+      <div class="mt-6 flex justify-center">
+        <Button
+          href={getInvolvedLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join the Alumni Network
+        </Button>
+      </div>
     </div>
   </div>
 </section>
