@@ -1,5 +1,6 @@
 ---
 import { socialMediaLinks } from "../shared-content/social-media-links";
+import FooterDisclaimer from "./footer-disclaimer.astro";
 import FooterHeader from "./footer-header.astro";
 import FooterLink from "./footer-link.astro";
 import FooterLogo from "./footer-logo.astro";
@@ -57,6 +58,10 @@ const { facebookLink, instagramLink, linkedinLink } = socialMediaLinks;
           </li>
         </ul>
       </div>
+    </div>
+
+    <div class="mt-10 border-t border-white/20 py-6">
+      <FooterDisclaimer />
     </div>
   </div>
 </section>
