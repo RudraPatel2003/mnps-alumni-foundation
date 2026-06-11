@@ -32,13 +32,16 @@ const pillars: PillarInformation[] = [
 
 <section class="w-full py-16">
   <div class="mx-auto max-w-7xl px-6">
-    <div class="text-center">
-      <h2 class="text-3xl font-bold text-primary md:text-4xl">
-        Our Three Pillars
+    <div class="mx-auto max-w-2xl text-center">
+      <h2 class="font-serif text-3xl text-primary md:text-4xl">
+        Our Three <span class="display-accent">Pillars</span>
       </h2>
+      <p class="mt-4 text-lg leading-relaxed text-primary/70">
+        Three ways we connect, celebrate, and invest in MNPS alumni.
+      </p>
     </div>
 
-    <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
+    <div class="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
       {
         pillars.map((pillar) => (
           <Pillar

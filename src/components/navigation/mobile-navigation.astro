@@ -1,5 +1,6 @@
 ---
 import { getInvolvedLink } from "../shared-content/get-involved-link";
+import Button from "../ui/button.astro";
 import HamburgerIcon from "./hamburger-icon.astro";
 import NavigationLink from "./navigation-link.astro";
 import NavigationLogo from "./navigation-logo.astro";
@@ -24,11 +25,15 @@ import NavigationLogo from "./navigation-logo.astro";
           SHARING STORIES
         </NavigationLink>
         <NavigationLink href="/funding-futures">FUNDING FUTURES</NavigationLink>
-        <NavigationLink
-          href={getInvolvedLink}
-          attributes={{ target: "_blank", rel: "noopener noreferrer" }}
-          border>GET INVOLVED</NavigationLink
-        >
+        <li>
+          <Button
+            href={getInvolvedLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GET INVOLVED
+          </Button>
+        </li>
       </ul>
     </div>
   </details>

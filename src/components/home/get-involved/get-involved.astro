@@ -1,51 +1,73 @@
 ---
 import { getInvolvedLink } from "../../shared-content/get-involved-link";
+import Button from "../../ui/button.astro";
+import Checkmark from "./checkmark.astro";
+
+const benefits: string[] = [
+  "Provide crucial funds to support the scaling up of the foundation",
+  "Gain access to exclusive alumni feedback activities",
+  "Nominate standout alumni stories to be highlighted",
+  "Help support MNPS initiatives and scholarships for graduates",
+  "Receive our quarterly e-newsletter with the latest MNPS Alumni Foundation news",
+];
 ---
 
 <section class="w-full py-16">
   <div class="mx-auto max-w-7xl px-6">
-    <div class="text-center">
-      <h2 class="text-3xl font-bold text-primary md:text-4xl">Get Involved</h2>
-      <p class="mx-auto mt-2 max-w-2xl text-lg font-semibold text-primary">
-        Stay Engaged. Make an Impact.
-      </p>
-    </div>
-    <p class="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-primary/80">
-      Join the MNPS Alumni Foundation and be part of a growing network of
-      graduates who care about giving back and supporting the next generation.
-      As a member, you'll receive updates on alumni events and stories, learn
-      about local chapters, and find opportunities to mentor, volunteer, or
-      invest in students.
-    </p>
-    <p class="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-primary/80">
-      By joining, you help us build a robust alumni database that strengthens
-      our collective voice. A strong network allows us to share timely updates,
-      gather alumni feedback, spotlight achievements, and mobilize support for
-      MNPS students and initiatives. When alumni are informed and engaged, we
-      can advocate more effectively and create greater opportunities for the
-      students who follow in our footsteps. Join the MNPS Alumni Network today!
-    </p>
-    <ul
-      class="mx-auto mt-6 max-w-3xl list-inside list-disc text-left text-base leading-relaxed text-primary/80"
-    >
-      <li>Provide crucial funds to support the scaling up of the foundation</li>
-      <li>Gain access to exclusive alumni feedback activities</li>
-      <li>Nominate standout alumni stories to be highlighted</li>
-      <li>Help support MNPS initiatives and scholarships for graduates</li>
-      <li>
-        Receive our quarterly e-newsletter with the latest MNPS Alumni
-        Foundation news
-      </li>
-    </ul>
-    <div class="mt-8 text-center">
-      <a
-        href={getInvolvedLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-secondary/80"
-      >
-        GET INVOLVED
-      </a>
+    <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 lg:gap-16">
+      <div>
+        <h2 class="font-serif text-3xl text-primary md:text-4xl">
+          Get <span class="display-accent">Involved</span>
+        </h2>
+        <p class="mt-3 text-lg font-semibold text-primary">
+          Stay Engaged. Make an Impact.
+        </p>
+        <p class="mt-6 text-lg leading-relaxed text-primary/80">
+          Join the MNPS Alumni Foundation and be part of a growing network of
+          graduates who care about giving back and supporting the next
+          generation. As a member, you'll receive updates on alumni events and
+          stories, learn about local chapters, and find opportunities to mentor,
+          volunteer, or invest in students.
+        </p>
+        <p class="mt-4 text-lg leading-relaxed text-primary/80">
+          By joining, you help us build a robust alumni database that
+          strengthens our collective voice. A strong network allows us to share
+          timely updates, gather alumni feedback, spotlight achievements, and
+          mobilize support for MNPS students and initiatives. When alumni are
+          informed and engaged, we can advocate more effectively and create
+          greater opportunities for the students who follow in our footsteps.
+          Join the MNPS Alumni Network today!
+        </p>
+        <div class="mt-8">
+          <Button
+            href={getInvolvedLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GET INVOLVED
+          </Button>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-primary/15 p-8 ring-1 ring-primary/10 sm:p-10">
+        <p
+          class="text-sm font-semibold tracking-[0.2em] text-primary uppercase"
+        >
+          Member Benefits
+        </p>
+        <ul class="mt-6 space-y-4">
+          {
+            benefits.map((benefit) => (
+              <li class="flex gap-3">
+                <Checkmark />
+                <span class="text-base leading-relaxed text-primary/80">
+                  {benefit}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
   </div>
 </section>
